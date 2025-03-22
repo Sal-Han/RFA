@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية ربوع الفرات - دير الزور</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-key.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="ربوع الفرات" width="120">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">مشاريعنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#donate">تبرع الآن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>نعمل من أجل مستقبل أفضل في دير الزور</h1>
+            <p>جمعية خيرية تُعنى بالتعليم والصحة والإغاثة</p>
+            <a href="#donate" class="btn btn-primary btn-lg">تبرع الآن</a>
+        </div>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">من نحن</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/about.jpg" class="img-fluid rounded" alt="عن الجمعية">
+                </div>
+                <div class="col-md-6">
+                    <p>جمعية ربوع الفرات تأسست عام 20XX لدعم المجتمع السوري في دير الزور...</p>
+                    <ul>
+                        <li>تنفيذ مشاريع تعليمية</li>
+                        <li>تقديم مساعدات إغاثية</li>
+                        <li>تحسين البنية التحتية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- مشاريعنا -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">مشاريعنا</h2>
+            <div class="row">
+                <div class="col-md-4 project-card">
+                    <img src="images/project1.jpg" class="img-fluid" alt="مشروع تعليم">
+                    <h3>مشروع التعليم</h3>
+                    <p>توفير مستلزمات دراسية لأكثر من 1000 طالب.</p>
+                </div>
+                <!-- أضف المزيد من المشاريع هنا -->
+            </div>
+        </div>
+    </section>
+
+    <!-- تبرع الآن -->
+    <section id="donate" class="py-5">
+        <div class="container">
+            <h2 class="text-center">تبرع الآن</h2>
+            <form id="donationForm">
+                <div class="mb-3">
+                    <label>المبلغ</label>
+                    <input type="number" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-success">تبرع عبر PayPal</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- اتصل بنا -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">اتصل بنا</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <input type="text" class="form-control mb-2" placeholder="اسمك">
+                        <input type="email" class="form-control mb-2" placeholder="بريدك الإلكتروني">
+                        <textarea class="form-control mb-2" placeholder="رسالتك"></textarea>
+                        <button type="submit" class="btn btn-primary">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>تابعونا</h5>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
