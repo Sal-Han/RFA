@@ -2,37 +2,47 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>جمعية ربوع الفرات</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <!-- Google Fonts for Arabic -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="شعار الجمعية" class="logo">
-    <h1>جمعية ربوع الفرات</h1>
-    <nav>
-      <a href="services.html">الخدمات</a>
-      <a href="programs.html">البرامج والمشاريع</a>
-      <a href="participate.html">شارك معنا</a>
+    <div class="header-content">
+      <img src="assets/logo.png" alt="شعار جمعية ربوع الفرات" class="logo" width="64" height="64" loading="lazy">
+      <h1>جمعية ربوع الفرات</h1>
+    </div>
+    <nav aria-label="القائمة الرئيسية">
+      <ul>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="programs.html">البرامج والمشاريع</a></li>
+        <li><a href="participate.html">شارك معنا</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="cards-container">
-    <div class="card" onclick="location.href='services.html'">
-      <h2>خدمات الجمعية</h2>
-      <p>الدعم الإغاثي، التمكين الاقتصادي، الدعم النفسي</p>
-    </div>
-    <div class="card" onclick="location.href='programs.html'">
-      <h2>برامج الجمعية</h2>
-      <p>الأسر المنتجة، التعليم المجتمعي، التوعية الصحية</p>
-    </div>
-    <div class="card" onclick="location.href='participate.html'">
-      <h2>شارك معنا</h2>
-      <p>التطوع، التبرع، تقديم المبادرات</p>
-    </div>
+  <main>
+    <section class="cards-container">
+      <a href="services.html" class="card" tabindex="0" aria-label="خدمات الجمعية">
+        <h2>خدمات الجمعية</h2>
+        <p>الدعم الإغاثي، التمكين الاقتصادي، الدعم النفسي</p>
+      </a>
+      <a href="programs.html" class="card" tabindex="0" aria-label="برامج الجمعية">
+        <h2>برامج الجمعية</h2>
+        <p>الأسر المنتجة، التعليم المجتمعي، التوعية الصحية</p>
+      </a>
+      <a href="participate.html" class="card" tabindex="0" aria-label="شارك معنا">
+        <h2>شارك معنا</h2>
+        <p>التطوع، التبرع، تقديم المبادرات</p>
+      </a>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 جمعية ربوع الفرات</p>
+    <p>© 2025 جمعية ربوع الفرات. جميع الحقوق محفوظة.</p>
   </footer>
 </body>
 </html>
