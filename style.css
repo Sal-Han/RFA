@@ -189,4 +189,30 @@ footer {
     min-width: 0;
     padding: 1.3rem 1.1rem;
   }
+  /* ...your existing styles above... */
+#lang-toggle {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding: 0.4em 1em;
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
 }
+#lang-toggle:hover, #lang-toggle:focus {
+  background: var(--primary-dark);
+  color: #fff;
+  outline: none;
+}
+@media (max-width: 680px) {
+  #lang-toggle {
+    margin: 0.5rem 0;
+  }
+
+}
+
