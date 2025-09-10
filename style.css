@@ -1,54 +1,192 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #12529a;
+  --background: #f7fafd;
+  --card-bg: #ffffff;
+  --card-shadow: 0 8px 32px 0 rgba(25, 118, 210, 0.07);
+  --text: #222831;
+  --text-light: #757575;
+  --accent: #fbc02d;
+  --border-radius: 24px;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    direction: rtl;
-  }
-  
-  header {
-    background-color: #003366;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .logo {
-    width: 80px;
-  }
-  
-  nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
-  
+  font-family: 'Cairo', Arial, sans-serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1.5rem 0 1rem 0;
+  box-shadow: 0 2px 16px rgba(25, 118, 210, 0.08);
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.logo {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  background: #fff;
+  padding: 4px;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 1rem;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+  transition: background var(--transition), color var(--transition);
+}
+nav a:hover, nav a:focus {
+  background: var(--accent);
+  color: var(--primary);
+  outline: none;
+}
+
+/* Main Cards */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards-container {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem auto 2rem auto;
+  max-width: 950px;
+  width: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem 2.2rem;
+  min-width: 260px;
+  max-width: 320px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+}
+.card:hover, .card:focus {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px 0 rgba(25,118,210,0.13);
+  border: 2px solid var(--primary);
+  background: #e3f2fd;
+  outline: none;
+}
+.card h2 {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.card p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 1.07rem;
+  line-height: 1.7;
+}
+.card::after {
+  content: "→";
+  position: absolute;
+  left: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--primary);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* Footer */
+footer {
+  background: #f5f5f5;
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.1rem 0;
+  font-size: 1.02rem;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
   .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 40px;
-    flex-wrap: wrap;
+    gap: 1.1rem;
   }
-  
+}
+@media (max-width: 680px) {
+  .header-content {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  nav ul {
+    gap: 1.2rem;
+  }
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+    margin: 2rem 0 1rem 0;
+  }
   .card {
-    background-color: #ffffff;
-    border: 2px solid #0077b6;
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 95vw;
+    min-width: 0;
+    padding: 1.3rem 1.1rem;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
-  
-  footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
+}
